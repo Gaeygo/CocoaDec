@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Homepage from "./components/Homepage/Homepage";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Signup from "./components/Signup/Signup";
+import Login from "./components/Login/Login";
+import OtpVerification from "./components/Otp/OtpVerification";
+import DashBoard from "./components/DashBoard/DashBoard";
+import { AuthProvider } from "./contexts/AuthContext";
+import { TensorProvider } from "./contexts/TensorContext";
+import {
+  ProtectedRoute,
+  PreventVerify,
+} from "./components/ProtectedRoute/ProtectedRoute";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <AuthProvider>
+          {" "}
+          <Switch>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+            <Route path="/signup">
+              <Signup />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <PreventVerify exact path="/verify" component={OtpVerification} />
+
+            <TensorProvider>
+              <ProtectedRoute exact path="/dashboard" component={DashBoard} />
+            </TensorProvider>
+          </Switch>
+        </AuthProvider>
+      </Router>
     </div>
   );
 }

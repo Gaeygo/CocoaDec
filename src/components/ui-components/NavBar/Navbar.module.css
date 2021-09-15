@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+::before,
+::after,
+body {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: none;
+    margin: none;
+    overflow: auto;
+}
+
+@media only screen and (min-width: 768px){
+    .NavDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.8rem;
+        margin: 0 90px 0 70px;
+    }
+    
+    
+    
+    
+    .LinkDiv {
+        display: flex;
+        justify-content: space-between;
+
+    
+    }
+
+    .NoMargin{
+        margin-top: 6px;
+    }
+    
+    .NavItem {
+        padding: 0 1.8rem;
+        font-size: 18px;
+        line-height: 27px;
+        color: #4F3835;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .ActiveNavItem>p{
+        border-bottom: 3px solid  #53B757;
+        border-radius: 1px;
+    }
+    
+
+
+    .NavDiv button {
+        height: 45px;
+       max-width: 216px;
+       width: 10%;
+        border-radius: 5px;
+        background-color: #4F3835;
+        color: white;
+        border: none;
+        line-height: 27px;
+        font-weight: 400;
+    
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .NavDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    .NavDiv img {
+        padding: none;
+        width: 6rem;
+    }
+    
+    
+    
+    .LinkDiv {
+        display: none;
+    
+    }
+    
+    .LinkDiv>h1 {
+        padding: 0 1.8rem;
+        font-size: 18px;
+        line-height: 27px;
+        color: #4F3835;
+        font-weight: 500;
+    }
+    
+    .NavDiv button {
+        height: 40px;
+        width: 5rem;
+        border-radius: 5px;
+        background-color: #4F3835;
+        color: white;
+        border: none;
+        line-height: 27px;
+        font-weight: 400;
+    
+    }
+    
+    
+}

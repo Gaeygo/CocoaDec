@@ -1,0 +1,19 @@
+input {
+    box-sizing: border-box;
+    height: 45px;
+    width: 339px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #4F3835;
+    /* margin: 10px 0; */
+    padding: 0 12px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4F3835;
+
+
+}

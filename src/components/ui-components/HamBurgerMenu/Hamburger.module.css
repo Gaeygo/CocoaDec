@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+::before,
+::after,
+html,
+body,a {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.Navitem {
+    box-sizing: border-box;
+    height: 44px;
+    width: 100%;
+    max-width: 230px;
+    margin-top: 0.7rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Active {
+    background: #9F7766;
+    border-radius: 0px 20px 20px 0px;
+}
+
+
+a:focus,
+:hover,
+:visited,
+:link,
+:active {
+    text-decoration: none;
+}

@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+::before,
+::after,
+body {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: none;
+    margin: none;
+    overflow: auto;
+    background: #ffffff;
+}
+
+button{
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    .ContentDisplay {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 3rem;
+    }
+
+    .ImgContainer {
+        margin-right: 60px;
+    }
+
+    .CocoaIMG {
+        max-height: 318.9998474121094px;
+        max-width: 290.1674499511719px;
+        width: 90%;
+        border-radius: 0px;
+
+
+    }
+
+    .IntroContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 112px;
+    }
+
+    .Intro {
+        width: 100%;
+        text-align: left;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding-top: 78px;
+        overflow: auto;
+        /* padding-left: 30%; */
+
+    }
+
+    .Intro>p {
+        color: #4F3835;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: 0em;
+        text-align: left;
+        height: 224px;
+        width: 539px;
+        border-radius: nullpx;
+
+
+    }
+
+    .Declare {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        text-transform: lowercase;
+        width: 300px;
+        color: rgba(79, 56, 53, 0.75);
+        /* margin-top: -3.5rem; */
+        /* padding-top: 25px; */
+    }
+
+
+
+    .ButtonContainer {
+        padding: 0;
+        display: flex;
+        min-width: 376px;
+        margin-left: -10rem;
+    }
+
+    .JoinButton {
+        height: 50px;
+        width: 216px;
+        border-radius: 5px;
+        background: #4F3835;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        cursor: pointer;
+
+    }
+
+    .DisplayedText {
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0em;
+        color: #4F3835;
+
+    }
+
+    .ButtonContainer>p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #4F3835;
+        padding-left: 31px;
+
+    }
+
+    .ToolHeader {
+        text-align: center;
+        padding-top: 11.5rem;
+    }
+
+    .ToolContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    
+
+    
+
+    
+
+    
+
+    .ContactInfoContainer {
+        padding: 5rem 0 8rem;
+    }
+
+    .ContactInfo {
+        display: flex;
+        height: 188px;
+        max-width: 1200px;
+        width: 90%;
+        border-radius: 20px;
+        background: #4F3835;
+        margin: 0 auto;
+        justify-content: space-around;
+
+    }
+
+    .SignUpText {
+        display: flex;
+        flex-direction: column;
+        margin-left: -5;
+        max-width: 50%;
+    }
+
+    .SignUpText>h1 {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 54px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #ffffff;
+        padding: 0;
+        margin-top: 51px;
+        /* margin-bottom: -24px; */
+
+    }
+
+    .SignUpText>h3 {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #ffffff;
+
+    }
+
+    .ContactForm {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 70px;
+        /* max-width: 500px; */
+        width: 45%;
+        border-radius: 10px;
+        background: #B97F7729;
+        margin: auto 0;
+        padding: 0 auto;
+
+
+    }
+
+    .ContactForm>input {
+        box-sizing: border-box;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0em;
+        text-align: left;
+        outline: none;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding-left: max(5%);
+
+    }
+
+    .FormBtn {
+        display: flex;
+        align-items: flex-start;
+        width: 40%;
+    }
+
+    .FormBtn>button {
+        background: #FFFFFF;
+        height: 58px;
+        /* max-width: 184px; */
+        width:95%;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #4F3835;
+        cursor: pointer;
+        margin-right:10px ;
+
+    }
+
+
+
+
+
+    .ContactForm>input:focus {
+        border: none;
+        outline: none;
+
+
+    }
+
+    .ContactForm>input::placeholder {
+        color: white;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+
+    /* footer {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #4F3835;
+        padding-bottom: 2.5rem;
+
+
+    } */
+
+  
+
+
+}
+
+@media only screen and (max-width: 1264px) {
+    .SignUpText>h1 {
+     
+
+    }
+
+    .SignUpText>h3 {
+   
+
+    }
+
+
+    .SignUpText {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+    }
+
+    .ContactForm{
+        margin-right: 3%;
+    }
+    .Invisible{
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .ContentDisplay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 6rem;
+    }
+
+    .CocoaIMG {
+        height: 172.99990844726562px;
+        width: 157.36355590820312px;
+
+    }
+
+    .IntroContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .Intro {
+        width: 70%;
+        min-width: 300px;
+        margin: auto;
+        text-align: left;
+        font-family: Poppins;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding-top: 78px;
+        overflow: auto;
+        /* padding-left: 30%; */
+
+    }
+
+    .Intro>p {
+        color: #4F3835;
+        width: 70%;
+        min-width: 300px;
+        overflow: hidden;
+    }
+    .Invisible{
+        display: none;
+    }
+
+    .Declare {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        text-transform: lowercase;
+        width: 300px;
+        color: rgba(79, 56, 53, 0.75);
+    }
+
+    .ButtonContainer {
+        padding: 2rem 0 3rem;
+    }
+
+    .JoinButton {
+        height: 50px;
+        width: 80vw;
+        min-width: 300px;
+        background: #4F3835;
+        border-radius: 5px;
+        color: white;
+        border: none;
+
+    }
+
+    .DisplayedText {
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0em;
+        color: #4F3835;
+
+    }
+
+    .Tools {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ToolHeader {
+        text-align: center;
+    }
+
+
+    
+
+    .ContactInfoContainer {
+        padding: 5rem 0 8rem;
+    }
+
+    .ContactInfo {
+        height: 296px;
+        width: 85%;
+        max-width: 352px;
+        border-radius: 20px;
+        background: #4F3835;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+
+    }
+
+    .SignUpText>h1 {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #ffffff;
+        padding-top: 30px;
+        padding-left: 26px;
+        margin-bottom: -17px;
+    }
+
+    .SignUpText>h3 {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 27px;
+        letter-spacing: 0em;
+        color: #FFFFFFAB;
+        padding-left: 26px;
+        padding-bottom: 13px;
+
+    }
+
+    .ContactForm {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .ContactForm>input {
+        box-sizing: border-box;
+        border: none;
+        height: 55px;
+        max-width: 300px;
+        width: 90%;
+        border-radius: 10px;
+        background: #B97F7729;
+        color: white;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0em;
+        text-align: left;
+        outline: none;
+        box-sizing: border-box;
+        margin: 0 auto;
+
+    }
+
+    .FormBtn {
+        padding-top: 26px;
+        display: flex;
+        align-items: flex-start;
+        padding-left: 20px;
+        /* padding-top: 40px; */
+    }
+
+    .FormBtn>button {
+        background: #FFFFFF;
+        border: none;
+        outline: none;
+        height: 50px;
+        max-width: 184px;
+        width: 50%;
+        border-radius: 10px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #4F3835;
+        cursor: pointer;
+    }
+
+
+
+    .ContactForm>input:focus {
+        border: none;
+        outline: none;
+
+
+    }
+
+    .ContactForm>input::placeholder {
+        color: white;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding-left: 15px;
+
+    }
+/* 
+    footer {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #4F3835;
+        padding-bottom: 2.5rem;
+
+
+    } */
+
+    .SignUpText{
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+    .Intro {
+        max-width: 90%;
+        margin: auto;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: 0em;
+        text-align: center;
+        padding-top: 78px;
+        overflow: auto;
+        /* padding-left: 30%; */
+
+    }
+
+    .Intro>p {
+        margin: 0 auto;
+        padding-bottom: 11px;
+        width: 100%;
+    }
+
+
+    .Declare {
+        width: 80%;
+        text-align: left;
+        margin: 0 auto;
+    }
+    .Invisible{
+        display: none;
+    }
+
+    .JoinButton {
+        max-width: 80%;
+
+
+    }
+
+
+
+    .DisplayedText {
+        font-size: 20px;
+
+
+    }
+
+    .ContactInfo {
+        width: 85%;
+        height: 310px;
+        border-radius: 20px;
+        background: #4F3835;
+        margin: 0 auto;
+
+    }
+
+}

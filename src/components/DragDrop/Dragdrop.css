@@ -1,0 +1,33 @@
+.container {
+    height: 263px;
+    width: 500px;
+    border-radius: 20px;
+    background: #4F3835;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.draginfo {
+    color: white;
+}
+
+.draginfo>p {
+    margin: 0;
+}
+
+.container:hover{
+    cursor: pointer;
+}
+
+.uploadedImage{
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+/*  */
