@@ -21,28 +21,28 @@ body {
         height: 100vh;
         grid-template-columns: 22% 78%;
         grid-auto-rows: 1fr;
-    
+
     }
-    
-    
+
+
     .FirstDiv {
         background: #4F3835;
-    
+
     }
-    
-    
-    
+
+
+
     img {
         margin-top: 3rem;
         margin-left: 1rem;
         margin-bottom: 2rem;
     }
-    
-    
+
+
     .Nav {
         padding-bottom: 19rem;
     }
-    
+
     .BtnContainer {
         display: flex;
         flex-direction: row;
@@ -50,16 +50,16 @@ body {
         align-items: center;
         cursor: pointer;
     }
-    
+
     .BtnContainer>button {
         outline: none;
         border: none;
-    
-    
+
+
         /* height: 18px;
        width: 25px; */
     }
-    
+
     .BtnContainer>span {
         font-size: 16px;
         font-style: normal;
@@ -68,9 +68,9 @@ body {
         letter-spacing: 0em;
         text-align: left;
         color: white;
-    
+
     }
-    
+
     .FirstDiv>footer {
         color: white;
         width: 143px;
@@ -82,16 +82,18 @@ body {
         line-height: 20px;
         letter-spacing: 0em;
         text-align: left;
-    
-    
-    
+
+
+
     }
+
     
+
     .Dragdrop {
         margin-top: 1.3rem;
         margin-left: 4rem;
     }
-    
+
     .Dragdrop>h1 {
         font-family: Poppins;
         font-size: 24px;
@@ -102,21 +104,157 @@ body {
         text-align: left;
         color: #4F3835;
     }
-    
+
     .Predict {
-        height: 50px;
-        width: 216px;
+        height: 45px;
+        width: 95%;
         margin-top: 1rem;
         border-radius: 5px;
         background: #9F7766;
         color: white;
         border: none;
         cursor: pointer;
-    
+
+    }
+
+    .ImageName {
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    .Logo2 {
+        display: none;
+    }
+
+    .MobileView {
+        display: none;
+    }
+
+    .Dragdrop+footer {
+        display: none;
     }
 }
 
 
 @media only screen and (max-width: 767px) {
-    
+    .Logo {
+        display: none;
+    }
+
+    .Nav {
+        /* width: 100%;
+        height: 100%; */
+        
+    }
+
+    .Container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+    }
+
+    .BtnContainer {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .DeskViewh1 {
+        display: none;
+    }
+
+    .FirstDiv {
+        /* margin-left: 44px;
+        margin-right: 44px; */
+        margin-top: 44px;
+        margin-bottom: 6rem;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1.MobileView {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+
+        text-align: left;
+
+    }
+
+    h2.MobileView {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .Logo2 {
+        height: 48px;
+        width: 150px;
+
+
+
+
+    }
+
+    .Dragdrop{
+        width: 90%;
+        margin: 44px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Dragdrop>h1 {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #4F3835;
+        align-self: flex-start;
+        margin-left: 8%;
+
+    }
+
+    .Dragdrop>h2 {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #4F3835;
+        align-self: flex-start;
+        margin-left: 8%;
+
+
+    }
+
+    .Predict {
+        display: none;
+    }
+
+    .Container>footer {
+        display: block;
+    }
+
+    .Dragdrop + footer{
+        position: absolute;
+        bottom: -85vw;
+    }
 }

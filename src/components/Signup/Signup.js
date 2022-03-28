@@ -12,20 +12,21 @@ import { useHistory } from "react-router";
 
 const Signup = () => {
   const [show, setShow] = useState(false);
-  const [errorType, setErrorType] = useState(null)
+  const [errorType, setErrorType] = useState(null);
   const formRef = useRef(null);
   const { email } = useAuth();
   const history = useHistory();
   useEffect(() => {}, []);
   let Error = (
     <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-      <p class="mb-0 h6 " >This {errorType} is taken </p>
+      <p className="mb-0 h6 ">This {errorType} is taken </p>
     </Alert>
   );
 
   const signUpusers = async (e) => {
     e.preventDefault();
-    let available;
+    // let available;
+    console.log(email);
     if (email) {
       formRef.current["email"].value = email;
       console.log(formRef.current["email"].value);
@@ -37,27 +38,19 @@ const Signup = () => {
         .child("users")
         .orderByChild(order)
         .equalTo(value)
-        .once("value", function (snapshot) {
-          if (snapshot.exists()) {
-            console.log("true");
-            available = true;
-          } else {
-            console.log("false");
-            available = false;
-          }
-        });
+        .once("value", function (snapshot) {});
     };
-
-
 
     const checkUser = async () => {
       userCheck(formRef.current["email"].value, "email").then((res) => {
-        if (!available) {
+        console.log(res.val());
+        if (!res.val()) {
           userCheck(formRef.current["phonenumber"].value, "number").then(
             (res) => {
-              if (available) {
-                setShow(true)
-                setErrorType("number")
+              console.log(res.val());
+              if (res.val()) {
+                setShow(true);
+                setErrorType("number");
               } else {
                 db.ref("users/" + formRef.current["phonenumber"].value)
                   .set({
@@ -72,9 +65,8 @@ const Signup = () => {
             }
           );
         } else {
-          setShow(true)
-          setErrorType("email")
-
+          setShow(true);
+          setErrorType("email");
         }
       });
 
@@ -85,7 +77,6 @@ const Signup = () => {
   };
 
   return (
-    
     <div className={classes.Container}>
       <div className={classes.FirstDiv}>
         <img className={classes.Logo} src={cocoa} alt="cocodec logo" />
@@ -104,6 +95,7 @@ const Signup = () => {
         </div>
       </div>
       <div className={classes.SignupFormDesc}>
+      {/* <div className={classes.InnerDiv}> */}
         {show ? Error : null}
         <h1>Sign Up</h1>
         <p>Sign Up to Cocoadec with your phone number.</p>
@@ -131,7 +123,7 @@ const Signup = () => {
             type="email"
             name="email"
             placeholder="exampl@email.com"
-            value={email}
+            defaultValue={email}
             required
           />
           <Input
@@ -144,6 +136,7 @@ const Signup = () => {
 
           <button type="submit">Sign Up</button>
         </form>
+        {/* </div> */}
         <div className={classes.FooterContainer}>
           <Footer />
         </div>

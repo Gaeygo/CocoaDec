@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 // import * as tf from "@tensorflow/tfjs";
 import classes from "./DashBoard.module.css";
 import Logo from "../../images/CocoadecWhite.png";
+import Logo2 from "../../images/Cocoadec.svg";
 import Footer from "../ui-components/Footer/Footer";
 import Hamburger from "../ui-components/HamBurgerMenu/Hamburger";
 import LogoutBtn from "../../images/logout.png";
@@ -26,6 +27,10 @@ const DashBoard = () => {
   useEffect(() => {
     console.log("running");
   }, [currentPathname, currentSearch, history]);
+
+  // useEffect(() => {
+  //   handlePrediction()
+  // } ,[image])
 
   const handlePrediction = async (e) => {
     e.preventDefault();
@@ -64,13 +69,14 @@ const DashBoard = () => {
       show={show}
       onHide={handleClose}
       animation={false}
-      
     >
-      <Modal.Header  closeButton></Modal.Header>
-      <Modal.Body style={{ backgroundColor: "#4F3835", color: "white", border: "none" }}>
+      <Modal.Header closeButton></Modal.Header>
+      <Modal.Body
+        style={{ backgroundColor: "#4F3835", color: "white", border: "none" }}
+      >
         Detected: {result}
       </Modal.Body>
-      <Modal.Footer >
+      <Modal.Footer>
         <Button variant="secondary" onClick={handleClose}>
           Close
         </Button>
@@ -81,7 +87,9 @@ const DashBoard = () => {
   return (
     <div className={classes.Container}>
       <div className={classes.FirstDiv}>
-        <img alt="logo" src={Logo} />
+        <img alt="logo" className={classes.Logo} src={Logo} />
+        <img alt="logo" className={classes.Logo2} src={Logo2} />
+
         <div className={classes.Nav}>
           <Hamburger />
         </div>
@@ -99,12 +107,17 @@ const DashBoard = () => {
       </div>
       <div className={classes.Dragdrop}>
         {show ? resultElement : null}
-        <h1>Upload Image here</h1>
+        <h1 className={classes.DeskViewh1}>Upload Image here</h1>
+        <h1 className={classes.MobileView}>Upload Image</h1>
+        <h2 className={classes.MobileView}>Please capture or select an image from your farm</h2>
         <Dragdrop />
+        <h6 className={classes.ImageName}>{imageName}</h6>
         <button className={classes.Predict} onClick={handlePrediction}>
           Predict
         </button>
       </div>
+
+      <Footer colorStyle={{ color: "white" }} />
     </div>
   );
 };

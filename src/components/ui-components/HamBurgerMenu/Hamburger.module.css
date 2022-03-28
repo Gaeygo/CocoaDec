@@ -3,53 +3,161 @@
 ::before,
 ::after,
 html,
-body,a {
+body,
+a {
     padding: 0;
     margin: 0;
 }
 
-a {
-    text-decoration: none;
+@media only screen and (min-width: 768px) {
+    a {
+        text-decoration: none;
+    }
+
+
+
+    .Navitem {
+        box-sizing: border-box;
+        height: 44px;
+        width: 100%;
+        max-width: 230px;
+        margin-top: 0.7rem;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: white;
+
+    }
+
+    .Container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .Active {
+        background: #9F7766;
+        border-radius: 0px 20px 20px 0px;
+    }
+
+
+
+    a:focus,
+    a:hover,
+    a:visited,
+    a:link,
+    a:active {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+        text-emphasis: none;
+        color: white;
+
+    }
+
+
+    .Navitem:hover {
+        color: white;
+        background: #e6bba8;
+        border-radius: 0px 20px 20px 0px;
+    }
+
+
+    .MenuNav {
+        display: none;
+    }
+
+
 }
 
+@media only screen and (max-width: 767px) {
+    .Container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Visibile{
+        display: none;
+    }
+
+    .MenuNav{
+        width: 39;
+        height: 30;
+    }
 
 
-.Navitem {
-    box-sizing: border-box;
-    height: 44px;
-    width: 100%;
-    max-width: 230px;
-    margin-top: 0.7rem;
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: white;
-    
-}
+    .Container{
+        width: 105%;
+        height: 100%;
+        background-color: #4F3835;
+        /* position: absolute; */
+    }
 
-.Container {
-    display: flex;
-    flex-direction: column;
-}
+    a {
+        text-decoration: none;
+    }
 
 
-.Active {
-    background: #9F7766;
-    border-radius: 0px 20px 20px 0px;
-}
+
+    .Navitem {
+        box-sizing: border-box;
+        height: 44px;
+        width: 100%;
+        max-width: 230px;
+        margin-top: 0.7rem;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: white;
+
+    }
+
+  
 
 
-a:focus,
-:hover,
-:visited,
-:link,
-:active {
-    text-decoration: none;
+    .Active {
+        background: #9F7766;
+        border-radius: 0px 20px 20px 0px;
+    }
+
+
+
+    a:focus,
+    a:hover,
+    a:visited,
+    a:link,
+    a:active {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+        text-emphasis: none;
+        color: white;
+
+    }
+
+
+    .Navitem:hover {
+        color: white;
+        background: #e6bba8;
+        border-radius: 0px 20px 20px 0px;
+    }
+
 }

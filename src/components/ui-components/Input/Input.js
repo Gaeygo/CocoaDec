@@ -13,6 +13,7 @@ const Input = (props) => {
         onChange={props.onChange}
         required={props.required}
         value={props.value}
+        defaultValue={props.defaultValue}
       />
     </div>
   );

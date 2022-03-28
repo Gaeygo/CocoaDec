@@ -45,7 +45,7 @@ const Homepage = () => {
           <div className={classes.ButtonContainer}>
             <button onClick={directToSignUp} className={classes.JoinButton}>Join Now</button>{" "}
             <p className={classes.Invisible}>
-              See how it works<span>➞</span>
+              See how it works➞
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@ const Homepage = () => {
           </div>
 
           <form ref={formRef} className={classes.ContactForm} onSubmit={startSignup}>
-            <input placeholder="Your email" name="email" type="email" required />
+            <input placeholder="Your email" onFocus={(e) => e.target.placeholder =""} name="email" type="email" required />
             <div className={classes.FormBtn}>
               <button type="submit">SIGN UP</button>
             </div>

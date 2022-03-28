@@ -3,6 +3,7 @@ import { useDropzone } from "react-dropzone";
 import { useTensor } from "../../contexts/TensorContext";
 import "./Dragdrop.css";
 import testImg from "../../images/Firebase.png";
+import UploadIcon from "../../images/cloud-computing 1.png"
 
 const Dragdrop = () => {
   const [files, setFiles] = useState([]);
@@ -41,7 +42,7 @@ const Dragdrop = () => {
     multiple: false,
   });
   return (
-    <div className="container" {...getRootProps()}>
+    <div className="dragcontainer" {...getRootProps()}>
       <input {...getInputProps()} />
       <div className="draginfo">
         {acceptedFiles.length > 0 ? (
@@ -51,10 +52,13 @@ const Dragdrop = () => {
               src={imageUrl.url}
               alt="selected file"
             ></img>
-            <h6>{acceptedFiles[0].name}</h6>
+            {/* <h6>{acceptedFiles[0].name}</h6> */}
           </>
         ) : (
-          <p style={{ color: "beige" }}> Drop some files here</p>
+          <>
+          {/* <p className="Upload" style={{ color: "beige" }}> Drop some files here</p> */}
+          <img src={UploadIcon} alt="Upload"></img>
+          </>
         )}
         {fileRejections.length > 0 ? <p>File rejected</p> : null}
 

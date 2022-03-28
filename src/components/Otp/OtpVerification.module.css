@@ -29,6 +29,7 @@ body {
         height: 100%;
         padding-left: 19.8%;
         overflow: auto;
+        justify-content: flex-start;
 
 
     }
@@ -37,12 +38,11 @@ body {
     .Logo {
         height: 27px;
         width: 149px;
-        padding-top: max(40%, 180px);
-        padding-bottom: max(20%, 95px);
+        
     }
 
     .OtpDesc {
-
+        padding-top: min(30%, 350px);
         /* margin: 0 auto; */
     }
 

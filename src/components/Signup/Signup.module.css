@@ -31,6 +31,7 @@ body {
         height: 100vh;
         padding-left: 19.8%;
         overflow: auto;
+        justify-content: flex-start;
 
 
     }
@@ -39,11 +40,11 @@ body {
     .Logo {
         height: 27px;
         width: 149px;
-        padding-top: max(40%, 180px);
-        padding-bottom: max(20%, 95px);
+      
     }
 
     .SignupDesc {
+        padding-top: min(30%, 350px);
 
         /* margin: 0 auto; */
     }
@@ -87,7 +88,9 @@ body {
 
     }
 
-    .SignupFormDesc>h1 {
+   
+
+    .SignupFormDesc h1 {
         font-size: 36px;
         font-style: normal;
         font-weight: 700;
@@ -95,11 +98,11 @@ body {
         letter-spacing: 0em;
         text-align: left;
         color: #4F3835;
-        margin-left: -11.3rem;
+        margin-left: -25%;
         padding-bottom: 15px;
     }
 
-    .SignupFormDesc>p {
+    .SignupFormDesc p {
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
@@ -107,8 +110,8 @@ body {
         letter-spacing: 0em;
         text-align: left;
         color: #4F3835;
-        margin-top: -1.5rem;
-        margin-left: -2.3rem;
+        margin-top: -0.5rem;
+        margin-left: -7%;
 
     }
 
@@ -198,7 +201,7 @@ body {
 
     }
 
-    .SignupFormDesc>h1 {
+    .SignupFormDesc h1 {
         font-size: 35px;
         font-style: normal;
         font-weight: 700;
@@ -211,7 +214,7 @@ body {
 
     }
 
-    .SignupFormDesc>p {
+    .SignupFormDesc p {
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -219,7 +222,7 @@ body {
         letter-spacing: 0em;
         text-align: left;
         color: #4F3835;
-        margin-top: -20px;
+        margin-top: 5px;
         margin-right: auto;
         margin-left: 5%;
 
@@ -227,23 +230,26 @@ body {
 
     }
 
-    .SignupForm {
+    .SignupForm{
         width: 90%;
         margin: 0 auto;
     }
+
+   
 
     .SignupForm>* {
         margin: 10px 0;
     }
 
     .InputStyle {
-        width: 100%;
-        min-width: 300px;
+        /* width: max(100%, 300px); */
+        width: 100%; 
+         min-width: 300px;
         margin: 0 auto;
     }
 
 
-    .SignupForm>button {
+    .SignupForm button {
         height: 45px;
         width: 100%;
         min-width: 300px;

@@ -21,7 +21,8 @@ const OtpVerification = () => {
         history.push("/dashboard");
       });
     } catch (error) {
-      alert(error.message);
+      alert(error);
+      console.log(error);
     }
   };
 

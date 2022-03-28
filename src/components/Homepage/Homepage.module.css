@@ -11,7 +11,7 @@ body {
     background: #ffffff;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
@@ -20,7 +20,7 @@ button{
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         padding-top: 3rem;
     }
 
@@ -62,7 +62,7 @@ button{
 
     .Intro>p {
         color: #4F3835;
-        font-size: 64px;
+        font-size: 60px;
         font-style: normal;
         font-weight: 700;
         line-height: 72px;
@@ -93,8 +93,20 @@ button{
         padding: 0;
         display: flex;
         min-width: 376px;
-        margin-left: -10rem;
+        margin-left: -9rem;
     }
+
+    .ButtonContainer>p{
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding-top: 0.7rem;
+        
+    }
+
 
     .JoinButton {
         height: 50px;
@@ -115,6 +127,7 @@ button{
         line-height: 36px;
         letter-spacing: 0em;
         color: #4F3835;
+        text-align: center;
 
     }
 
@@ -143,13 +156,6 @@ button{
         margin: 0 auto;
     }
 
-    
-
-    
-
-    
-
-    
 
     .ContactInfoContainer {
         padding: 5rem 0 8rem;
@@ -164,6 +170,7 @@ button{
         background: #4F3835;
         margin: 0 auto;
         justify-content: space-around;
+        min-height: 190px;
 
     }
 
@@ -206,6 +213,7 @@ button{
         height: 70px;
         /* max-width: 500px; */
         width: 45%;
+        min-width: 350px;
         border-radius: 10px;
         background: #B97F7729;
         margin: auto 0;
@@ -227,9 +235,11 @@ button{
         outline: none;
         box-sizing: border-box;
         margin: 0 auto;
-        padding-left: max(5%);
+        padding-left: max(9%, 30px);
 
     }
+
+    
 
     .FormBtn {
         display: flex;
@@ -241,7 +251,8 @@ button{
         background: #FFFFFF;
         height: 58px;
         /* max-width: 184px; */
-        width:95%;
+        min-width: 90px;
+        width: 95%;
         border-radius: 10px;
         border: none;
         outline: none;
@@ -252,7 +263,7 @@ button{
         text-align: center;
         color: #4F3835;
         cursor: pointer;
-        margin-right:10px ;
+        margin-right: 10px;
 
     }
 
@@ -291,21 +302,15 @@ button{
 
     } */
 
-  
+
 
 
 }
 
 @media only screen and (max-width: 1264px) {
-    .SignUpText>h1 {
-     
+    .SignUpText>h1 {}
 
-    }
-
-    .SignUpText>h3 {
-   
-
-    }
+    .SignUpText>h3 {}
 
 
     .SignUpText {
@@ -314,14 +319,21 @@ button{
         margin-left: 50px;
     }
 
-    .ContactForm{
+    .ContactForm {
         margin-right: 3%;
     }
-    .Invisible{
+
+    .Invisible {
         display: none;
     }
 }
 
+
+@media only screen and (max-width: 1018px) {
+    .CocoaIMG{
+        display: none;
+    }
+}
 
 
 @media only screen and (max-width: 767px) {
@@ -333,6 +345,7 @@ button{
     }
 
     .CocoaIMG {
+        display: block;
         height: 172.99990844726562px;
         width: 157.36355590820312px;
 
@@ -369,7 +382,8 @@ button{
         min-width: 300px;
         overflow: hidden;
     }
-    .Invisible{
+
+    .Invisible {
         display: none;
     }
 
@@ -420,7 +434,7 @@ button{
     }
 
 
-    
+
 
     .ContactInfoContainer {
         padding: 5rem 0 8rem;
@@ -446,7 +460,7 @@ button{
         color: #ffffff;
         padding-top: 30px;
         padding-left: 26px;
-        margin-bottom: -17px;
+        margin-bottom: -2px;
     }
 
     .SignUpText>h3 {
@@ -532,7 +546,8 @@ button{
         padding-left: 15px;
 
     }
-/* 
+
+    /* 
     footer {
         font-size: 14px;
         font-style: normal;
@@ -546,7 +561,7 @@ button{
 
     } */
 
-    .SignUpText{
+    .SignUpText {
         margin: 0;
     }
 
@@ -582,7 +597,8 @@ button{
         text-align: left;
         margin: 0 auto;
     }
-    .Invisible{
+
+    .Invisible {
         display: none;
     }
 

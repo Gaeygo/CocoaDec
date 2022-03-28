@@ -1,4 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
+import Loader from "react-spinners/ClipLoader";
+import { css } from "@emotion/react";
+
 import cocoa from "../../images/CocoadecWhite.png";
 import cocoaMobile from "../../images/Cocoadec.png";
 import Input from "../ui-components/Input/Input";
@@ -9,10 +12,16 @@ import { useAuth } from "../../contexts/AuthContext";
 import { firebase, auth, db } from "../../firebase";
 
 const Login = () => {
+  const [loading, setloading] = useState(false);
   const history = useHistory();
   const formRef = useRef(null);
   const { signInWithNumber, otp, setOtp, setCurrentNumber } = useAuth();
   const unmounted = useRef(false);
+
+  const override = css`
+    display: block;
+    margin: 0 auto;
+  `;
 
   useEffect(() => {
     console.log("mounted");
@@ -26,6 +35,7 @@ const Login = () => {
     e.preventDefault();
     if (!unmounted.current) {
       try {
+        setloading(true);
         let verify = new firebase.auth.RecaptchaVerifier("sign-in-button", {
           size: "invisible",
         });
@@ -43,20 +53,23 @@ const Login = () => {
                     formRef.current["phonenumber"].value,
                     verify
                   ).then((result) => {
-                    setCurrentNumber(formRef.current["phonenumber"].value)
+                    setCurrentNumber(formRef.current["phonenumber"].value);
                     setOtp(result);
+                    setloading(false);
 
                     history.push("/verify");
                   })
                 );
             } else {
               console.log("false");
-              alert("User needs to register")
-              history.push("/signup")
+              alert("User needs to register");
+              history.push("/signup");
             }
           });
       } catch (error) {
+        setloading(false);
         // console.log(error.message);
+        alert(error);
       }
     }
   };
@@ -82,6 +95,7 @@ const Login = () => {
       <div className={classes.LoginFormDesc}>
         <h1>Log in </h1>
         <p>Login with your phone number.</p>
+
         <form
           className={classes.LoginForm}
           ref={formRef}
@@ -94,11 +108,14 @@ const Login = () => {
             name="phonenumber"
             required={true}
           />
+          <Loader loading={loading} css={override} />
+
           {/* <div id="sign-in-button"></div> */}
           <button id="sign-in-button" type="submit">
             Request OTP
           </button>
         </form>
+
         <h3
           className={[classes.Otp, classes.H3Text].join(" ")}
           style={{ paddingTop: "50px" }}
