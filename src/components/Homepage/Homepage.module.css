@@ -17,15 +17,18 @@ button {
 
 @media only screen and (min-width: 768px) {
     .ContentDisplay {
+        width: 90%;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         padding-top: 3rem;
+        margin: 0 auto;
+
     }
 
     .ImgContainer {
-        margin-right: 60px;
+        margin-right: 0;
     }
 
     .CocoaIMG {
@@ -39,10 +42,12 @@ button {
 
     .IntroContainer {
         display: flex;
+        width: 100%;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin: 0 112px;
+        margin: 0 auto;
+
     }
 
     .Intro {
@@ -93,7 +98,8 @@ button {
         padding: 0;
         display: flex;
         min-width: 376px;
-        margin-left: -9rem;
+        margin-top: 34px;
+        align-self: flex-start;
     }
 
     .ButtonContainer>p{
@@ -158,14 +164,17 @@ button {
 
 
     .ContactInfoContainer {
-        padding: 5rem 0 8rem;
+        padding: 5rem 0 8rem 0;
+        width: 90%;
+        margin: 0 auto;
+
     }
 
     .ContactInfo {
         display: flex;
         height: 188px;
-        max-width: 1200px;
-        width: 90%;
+        /* max-width: 1200px; */
+        width: 100%;
         border-radius: 20px;
         background: #4F3835;
         margin: 0 auto;

@@ -13,14 +13,16 @@ body {
 @media only screen and (min-width: 768px){
     .NavDiv {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
-        padding: 1.8rem;
-        margin: 0 90px 0 70px;
+        /* padding: 1.8rem; */
+        margin: 0 auto ;
+        width: 90%
     }
 
     .Logo{
         padding-bottom: 1rem;
+        margin-left: 0;
     }
     
     
