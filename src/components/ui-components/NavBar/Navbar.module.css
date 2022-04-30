@@ -70,12 +70,14 @@ body {
     }
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 830px){
     .NavDiv {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem;
+        padding: 1rem 0;
+        width: 90%;
+        margin: 0 auto;
     }
     
     .NavDiv img {

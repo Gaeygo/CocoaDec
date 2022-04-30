@@ -260,7 +260,7 @@ button {
         background: #FFFFFF;
         height: 58px;
         /* max-width: 184px; */
-        min-width: 90px;
+        min-width: 120px;
         width: 95%;
         border-radius: 10px;
         border: none;
@@ -330,10 +330,19 @@ button {
 
     .ContactForm {
         margin-right: 3%;
+        width: 53%;
     }
 
     .Invisible {
         display: none;
+    }
+
+    .ContactForm > input {
+        max-width: 200px;
+    }
+
+    .FormBtn > button {
+
     }
 }
 
@@ -351,6 +360,8 @@ button {
         flex-direction: column;
         align-items: center;
         padding-top: 6rem;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .CocoaIMG {
@@ -361,6 +372,8 @@ button {
     }
 
     .IntroContainer {
+        width: 100%;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -368,9 +381,9 @@ button {
     }
 
     .Intro {
-        width: 70%;
+        width: 100%;
         min-width: 300px;
-        margin: auto;
+        margin:0 auto;
         text-align: left;
         font-family: Poppins;
         font-size: 40px;
@@ -408,12 +421,13 @@ button {
 
     .ButtonContainer {
         padding: 2rem 0 3rem;
+        width: 100%;
     }
 
     .JoinButton {
         height: 50px;
-        width: 80vw;
-        min-width: 300px;
+        width: 100%;
+        /* min-width: 300px; */
         background: #4F3835;
         border-radius: 5px;
         color: white;
@@ -487,14 +501,15 @@ button {
     .ContactForm {
         display: flex;
         flex-direction: column;
-        margin: 0;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .ContactForm>input {
         box-sizing: border-box;
         border: none;
         height: 55px;
-        max-width: 300px;
+        min-width: 300px;
         width: 90%;
         border-radius: 10px;
         background: #B97F7729;
@@ -523,8 +538,7 @@ button {
         border: none;
         outline: none;
         height: 50px;
-        max-width: 184px;
-        width: 50%;
+        width: 184px;
         border-radius: 10px;
         font-size: 18px;
         font-style: normal;
@@ -556,8 +570,9 @@ button {
 
     }
 
-    /* 
-    footer {
+    
+   .ContactInfoContainer + footer {
+        display: block;
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
@@ -565,10 +580,8 @@ button {
         letter-spacing: 0em;
         text-align: center;
         color: #4F3835;
-        padding-bottom: 2.5rem;
 
-
-    } */
+    } 
 
     .SignUpText {
         margin: 0;
