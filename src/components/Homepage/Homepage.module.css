@@ -528,12 +528,15 @@ button {
     .FormBtn {
         padding-top: 26px;
         display: flex;
+        width: 85%;
+        margin: 0 auto;
         align-items: flex-start;
-        padding-left: 20px;
+        /* padding-left: 20px; */
         /* padding-top: 40px; */
     }
 
     .FormBtn>button {
+        box-sizing: border-box;
         background: #FFFFFF;
         border: none;
         outline: none;
